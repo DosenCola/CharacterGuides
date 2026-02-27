@@ -1,0 +1,547 @@
+:root {
+  --bg: #313334;
+  --card: #0f0f10;
+  --accent: #d81f26;
+  --accent-2: #ffffff;
+  --muted: #9aa4ad;
+}
+
+@font-face {
+  font-family: "Impact Strive";
+  /* eigene Font wird hier eingebunden */
+  src: url("../fonts/Impact\ -\ Strive.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "Impact Strive", sans-serif;
+  background: var(--bg);
+  color: var(--accent-2);
+  min-height: 100vh;
+  padding: 36px;
+}
+
+#noCharsMsg {
+  color: var(--muted);
+  padding: 18px;
+  font-size: 22px;
+  padding: 10px 12px;
+  margin: 0 auto 18px;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+/* Text Styling */
+header {
+  margin: auto;
+  /* überschrift fängt mit charboxen an */
+  max-width: 1560px;
+}
+h1 {
+  margin: auto;
+  font-size: 57px;
+  font-family: "Impact Strive", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+header p {
+  margin: auto;
+  color: var(--muted);
+  letter-spacing: 1.5px;
+  padding: 12px 0px;
+  font-size: 24px;
+}
+
+button {
+  font-family: "Impact Strive", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: var(--accent);
+  color: var(--accent-2);
+  border: 0;
+  padding: 12px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-shadow: 0 0 6px var(--bg);
+}
+
+#charSearch {
+  display: block;
+  font-family: "Impact Strive", sans-serif;
+  letter-spacing: 1.5px;
+  width: 100%;
+  max-width: 700px;
+  padding: 10px 12px;
+  margin: 0 auto 18px;
+  /* zentriert die Charakterseite und begrenzt die maximale Breite */
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-2);
+  font-size: 22px;
+}
+/* Suchfeld Styling wenn es gefocust ist */
+#charSearch:focus {
+  outline: 3px solid rgba(216, 31, 38, 0.18);
+  box-shadow: 0 6px 18px rgba(216, 31, 38, 0.08);
+  border-color: rgba(216, 31, 38, 0.22);
+}
+
+/* Styling für das Difficulty-Filter Formular */
+#difficultyForm {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: left;
+  margin: 8px auto 18px;
+}
+/* Styling für das Label im Difficulty-Filter Formular */
+#difficultyForm label {
+  color: var(--muted);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+/* Styling für das Select im Difficulty-Filter Formular, ähnlich gehalten wie das Suchfeld */
+#difficultyFilter {
+  font-family: "Impact Strive", sans-serif;
+  letter-spacing: 1.5px;
+  background: linear-gradient(180deg, var(--muted) 0%, #b71c20 100%);
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 36px 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 160px;
+  appearance: none;
+  background-image: /* transparenter Hintergrund mit Verlauf für das Dropdown-Menü */
+    linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.9) 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+}
+#difficultyFilter:focus {
+  outline: 3px solid rgba(216, 31, 38, 0.18);
+  box-shadow: 0 6px 18px rgba(216, 31, 38, 0.08);
+}
+
+/* Farbgebung für die einzelnen Optionen */
+#difficultyFilter option {
+  background: var(--card);
+  color: var(--accent-2);
+}
+#difficultyFilter option:hover {
+  background: rgba(216, 31, 38, 0.12);
+}
+
+/* Charakter Grid Styling für ul*/
+.char-grid {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+  grid-auto-rows: auto;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 1600px;
+  list-style: none;
+  padding: 0;
+}
+
+/* einzelne Boxen für jedes Listenelement */
+.char-box {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  max-width: 220px;
+  text-decoration: none;
+  color: var(--accent-2);
+  background: transparent;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  transition: transform 0.12s ease;
+  justify-content: top;
+  align-items: center;
+}
+.char-box:focus-visible {
+  outline: transparent;
+}
+
+.char-icon-img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1/1;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+  transform: scale(0.94);
+  margin: 0 auto;
+}
+
+/* Hover Effekt für Bilder wenn die Box gehovered wurde*/
+.char-box:hover .char-icon-img {
+  transform: scale(1.06);
+  transition: transform 0.12s ease;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+/* Anpassungen für den Namen, da sich das Bild und die Box vergrößern und der Name sich verschieben muss */
+.char-box:hover .char-name {
+  color: var(--accent);
+  transition: transform 0.12s ease;
+  transform: translateY(9px);
+}
+/* Fokus Effekt für tabben durch Bilder */
+.char-box:focus-visible .char-icon-img {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Charakter Name Styling */
+.char-grid span {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* transition für den Namen wenn nicht mehr gehovered wird */
+  transition: transform 0.12s ease;
+  /* width verkleinern damit der Name nicht über das Bild hinausgeht */
+  max-width: 94%;
+}
+
+/* -- Beginn des Styling der allgemeinen Elemente für einzelne Charaktere -- */
+main {
+  position: relative;
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+/* Styling für das Inhaltsverzeichnis einzelner Charaktere + Animationen */
+.guide-nav {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 18px auto;
+  max-width: 1560px;
+}
+.guide-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.guide-nav li {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.guide-hero {
+  display: block;
+  margin: 28px auto;
+}
+
+/* verschiebt das Bild sodass es neben dem Text in den Sections steht */
+.guide-hero figure {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.guide-hero img {
+  width: 450px;
+  max-width: 450px;
+  display: block;
+  margin: 0;
+  opacity: 0.7;
+}
+.guide-intro {
+  position: relative;
+  z-index: 1;
+}
+.guide-sections {
+  max-width: 1560px;
+  margin: 8px auto 80px;
+  padding: 0 8px;
+  position: relative;
+  z-index: 1;
+}
+.guide-sections figure {
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  display: block;
+}
+/* Styling für Bilder, die innerhalb der Sections eingefügt werden */
+.guide-sections figure img {
+  display: block;
+  width: 120%;
+  max-width: 380px; /* begrenzt die Bildbreite */
+  height: auto;
+  margin: 12px -5px; /* rückt das Bild bündig an die Innenseite der Section */
+  transform: none;
+}
+/* Konkretes Styling für das Bild im #goal-Artikel */
+#goal img {
+  display: block;
+  width: 100%;
+  max-width: 420px; /* etwas kleiner für Ziel-Bild */
+  height: auto;
+  margin: 12px 0;
+  transform: none;
+}
+.guide-section {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 18px;
+  border-radius: 8px;
+  margin: 18px 0;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.video-embed {
+  background: #000;
+  height: 360px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+.resources-list {
+  list-style: none;
+  padding: 0;
+}
+.resources-list li a {
+  text-decoration: underline;
+  color: var(--accent-2);
+  padding: 0;
+}
+/* -- Beginn des Styling für einzelne Charaktere -- */
+/* Happy Chaos spezifische Farbgebung*/
+.character-hc {
+  --accent-hc: #2596be;
+  --accent-2-hc: #e98a68;
+  --muted-hc: #dec770;
+  --border-hc: #3b3338;
+}
+.hcbutton {
+  background: var(--accent-hc);
+  color: var(--muted-hc);
+  text-shadow: 0 0 6px var(--border-hc);
+}
+.character-hc .guide-intro h1 {
+  margin: 0 0 8px 0;
+  color: var(--accent-hc);
+}
+.character-hc .guide-intro p {
+  margin: 0 0 14px 0;
+  color: var(--accent-2-hc);
+  font-size: 25px;
+}
+.character-hc .guide-intro .character-title {
+  color: var(--muted-hc);
+  font-size: 40px;
+}
+.character-hc .guide-section h2 {
+  margin: 0 0 10px 0;
+  color: var(--accent-hc);
+  font-size: 30px;
+}
+.character-hc .guide-nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-2-hc);
+  text-decoration: none;
+  transition:
+    color 0.12s ease,
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+.character-hc .guide-nav a:hover,
+.character-hc .guide-nav a:focus-visible {
+  color: var(--accent-hc);
+  border-color: var(--accent-hc);
+  background: var(--border-hc);
+  outline: none;
+}
+
+/* A.B.A spezifische Farbgebung*/
+.character-aba {
+  --accent-aba: #ede8d8;
+  --accent-2-aba: #ddb465;
+  --muted-aba: #7ca18d;
+  --border-aba: #545b5c;
+}
+.ababutton {
+  background: var(--muted-aba);
+  color: var(--accent-2-aba);
+  text-shadow: 0 0 6px var(--border-aba);
+}
+.guide-hero .aba-figure {
+  right: 0px;
+}
+.character-aba .guide-intro h1 {
+  margin: 0 0 8px 0;
+  color: var(--accent-aba);
+}
+.character-aba .guide-intro p {
+  margin: 0 0 14px 0;
+  color: var(--accent-2-aba);
+  font-size: 25px;
+}
+.character-aba .guide-intro .character-title {
+  color: var(--muted-aba);
+  font-size: 40px;
+}
+.character-aba .guide-section h2 {
+  margin: 0 0 10px 0;
+  color: var(--accent-aba);
+  font-size: 30px;
+}
+.character-aba .guide-nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-2-aba);
+  text-decoration: none;
+  transition:
+    color 0.12s ease,
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+.character-aba .guide-nav a:hover,
+.character-aba .guide-nav a:focus-visible {
+  color: var(--accent-aba);
+  border-color: var(--accent-aba);
+  background: rgba(216, 31, 38, 0.12);
+  outline: none;
+}
+
+/* Token styling für Fighting Game Notation 
+   siehe: https://www.dustloop.com/w/Notation#Numpad_Notation */
+.token {
+  font-weight: 700;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+.token-S {
+  color: #2ecc71;
+}
+.token-K {
+  color: #3498db;
+}
+.token-H {
+  color: #e74c3c;
+}
+.token-P {
+  color: #9b59b6;
+}
+.token-D {
+  color: #f39c12;
+}
+
+/* Notation Hover-Bilder */
+.notation {
+  position: relative;
+  display: inline-flex;
+  cursor: help;
+  overflow: visible;
+}
+.notation .notation-img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%);
+  background: var(--card);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  white-space: normal;
+  box-sizing: border-box;
+}
+.notation .notation-img img {
+  width: 200px;
+  height: auto;
+  vertical-align: middle;
+}
+.notation:hover .notation-img {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 790px) {
+  /* Schriftgröße und Bildgröße für kleinere Bildschirme anpassen */
+  h1 {
+    font-size: 48px;
+  }
+  .char-icon-img {
+    width: 150px;
+    height: 150px;
+  }
+  .char-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  }
+  .char-grid span {
+    max-width: 70%;
+  }
+  .char-box {
+    height: 200px;
+  }
+  #charSearch {
+    max-width: 70%;
+    font-size: 20px;
+  }
+  header p {
+    font-size: 20px;
+  }
+  .guide-hero img {
+    opacity: 0.4;
+  }
+  .guide-section {
+    font-size: 18px;
+  }
+  .character-hc .guide-intro p {
+    font-size: 20px;
+  }
+  .character-hc .guide-intro .character-title {
+    font-size: 30px;
+  }
+  .character-aba .guide-intro p {
+    font-size: 20px;
+  }
+  .character-aba .guide-intro .character-title {
+    font-size: 30px;
+  }
+}

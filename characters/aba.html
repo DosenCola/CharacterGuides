@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A.B.A — Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/tokens.js" defer></script>
+  </head>
+  <body class="character-aba">
+    <main>
+      <div>
+        <button class="ababutton" onclick="window.close()">
+          Zurück zur Auswahl
+        </button>
+      </div>
+
+      <section class="guide-hero">
+        <figure class="aba-figure">
+          <img
+            src="../images/chara27_aba.png"
+            alt="A.B.A - Artwork"
+            tabindex="-1"
+            draggable="false"
+          >
+        </figure>
+
+        <div class="guide-intro" id="aba-title">
+          <h1>A.B.A</h1>
+          <p>Unersättliche Flamme der Eifersucht</p>
+          <p class="character-title">Hingebungsvoll klammernder Homunkulus</p>
+        </div>
+      </section>
+
+      <nav class="guide-nav">
+        <ul>
+          <li><a href="#mechanics">1. Einzigartige Mechaniken</a></li>
+          <li><a href="#char-ziel">2. Ziel des Charakters</a></li>
+          <li><a href="#combos">3. Combos</a></li>
+          <li><a href="#video">4. Ausführlicher Video-Guide</a></li>
+          <li><a href="#resources">5. Ressourcen</a></li>
+        </ul>
+      </nav>
+
+      <section class="guide-sections">
+        <article id="mechanics" class="guide-section">
+          <h2>1. Einzigartige Mechaniken</h2>
+          <p>
+            A.B.A besitzt die Möglichkeit in einen Wutzustand (JR) zu wechseln,
+            der ihre Aktionen stark verbessert und sie zum mächtigsten Charakter
+            im Spiel macht.<br>Dafür gibt es einige Einschränkungen:
+          </p>
+          <ul>
+            <li>
+              Schwache Angriffe — A.B.A muss immer defensiv spielen, um eine
+              Möglichkeit zu finden, in den Wutzustand zu wechseln.
+            </li>
+            <li>
+              Begrenzter Wutzustand — Je nach Füllung ihrer Leiste kann A.B.A
+              nur eine begrenzte Zeit im Wutzustand bleiben. Kann im
+              Normalzustand mit Angriffen wie
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              gefüllt werden.
+            </li>
+            <li>
+              Langsame Geschwindigkeit — A.B.A bewegt sich im Normalzustand
+              langsamer als andere Charaktere, wodurch sie auf
+              <span class="notation"
+                >236K<span class="notation-img"
+                  ><img src="../images/A.B.A_236K.png" alt="236K"></span
+              ></span>
+              und
+              <span class="notation"
+                >214K<span class="notation-img"
+                  ><img src="../images/A.B.A_214K.png" alt="214K"></span
+              ></span>
+              angewiesen ist, um sich zu bewegen, was sie anfällig für Konter
+              macht.
+            </li>
+          </ul>
+          <p>
+            Daraus ergibt sich ein Spielstil der darauf basiert nach jeder Combo
+            im Wutzustand, in den Normalzustand zu wechseln (<span
+              class="notation"
+              >JR 63214P<span class="notation-img"
+                ><img src="../images/A.B.A_JR63214P.png" alt="63214P"></span
+            ></span>
+            oder
+            <span class="notation"
+              >JR 214H<span class="notation-img"
+                ><img
+                  src="../images/A.B.A_JR214H.png"
+                  alt="214H"></span></span
+            >) was Ressourcen auffüllt, um danach rechtzeitig wieder in den
+            Wutzustand zu wechseln (<span class="notation"
+              >63214P<span class="notation-img"
+                ><img src="../images/A.B.A_63214P.png" alt="63214P"></span
+            ></span>
+            oder
+            <span class="notation"
+              >214H<span class="notation-img"
+                ><img src="../images/A.B.A_214H.png" alt="214H"></span></span
+            >). Sobald A.B.A im Wutzustand ist, erhält sie folgende Vorteile:
+          </p>
+          <ul>
+            <li>
+              Erhöhte Angriffskraft — Ihre Angriffe verursachen mehr Schaden.
+            </li>
+            <li>
+              Trick-Optionen — Ihre Angriffe bekommen neue Eigenschaften, so
+              werden
+              <span class="notation"
+                >JR 236K<span class="notation-img"
+                  ><img src="../images/A.B.A_JR236K.png" alt="JR236K"></span
+              ></span>
+              und
+              <span class="notation"
+                >JR 2H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR2H.png" alt="JR2H"></span
+              ></span>
+              zum wichtigsten High/Low-Mixup.
+            </li>
+            <li>
+              Schnellere Angriffe und Geschwindigkeit — Dadurch kann A.B.A,
+              sobald sie im Wutzustand ist, immer den Gegner überwältigen und
+              zwingen defensiv zu spielen.
+            </li>
+          </ul>
+          <br>
+          <figure>
+            <img
+              src="https://www.dustloop.com/wiki/images/f/ff/GGST_A.B.A_Jealousy_Gauge.png"
+              alt="A.B.A Ressource"
+              draggable="false"
+              tabindex="-1"
+            >
+            <figcaption>
+              Oben: Eifersuchts-Leiste im Normalzustand<br>Unten:
+              Eifersuchts-Leiste im Wutzustand (nimmt mit der Zeit ab)
+            </figcaption>
+          </figure>
+        </article>
+
+        <article id="char-ziel" class="guide-section">
+          <h2>2. Ziel des Charakters</h2>
+          <p>
+            A.B.A's Ziel besteht immer darin eine Öffnung in der Offensive des
+            Gegner zu finden und diese mit
+            <span class="notation"
+              >2P<span class="notation-img"
+                ><img src="../images/A.B.A_2P.png" alt="2P"></span></span
+            >,
+            <span class="notation"
+              >2K<span class="notation-img"
+                ><img src="../images/A.B.A_2K.png" alt="2K"></span
+            ></span>
+            oder
+            <span class="notation"
+              >2S<span class="notation-img"
+                ><img src="../images/A.B.A_2S.png" alt="2S"></span
+            ></span>
+            zu bestrafen, was ihr erlaubt in den Wutzustand zu wechseln.<br>Sobald
+            sie im Wutzustand ist, besteht ihr Ziel darin den Gegner mit ihren
+            verbesserten Angriffen zu überwältigen:
+          </p>
+          <ul>
+            <li>
+              Luftangriffe —
+              <span class="notation"
+                >JR j.S<span class="notation-img"
+                  ><img src="../images/A.B.A_JRjS.png" alt="JR j.S"></span
+              ></span>
+              und
+              <span class="notation"
+                >JR j.H<span class="notation-img"
+                  ><img src="../images/A.B.A_JRjH.png" alt="JR j.H"></span
+              ></span>
+              bieten gute Möglichkeiten, den Gegner aus der Luft zu treffen und
+              zu verwirren.
+            </li>
+            <li>
+              Wurf — ihre schnelle Geschwindigkeit ermöglicht es ihr, den Gegner
+              schnell zu greifen und zu werfen.
+            </li>
+            <li>
+              High/Low-Mixup — ein Mix aus
+              <span class="notation"
+                >JR 2H<span class="notation-img"
+                  ><img
+                    src="../images/A.B.A_JR2H.png"
+                    alt="JR 2H"></span></span
+              >, welches nach jedem der beiden Treffer in
+              <span class="notation"
+                >JR 236K<span class="notation-img"
+                  ><img src="../images/A.B.A_JR236K.png" alt="JR 236K"></span
+              ></span>
+              geändert werden kann, und
+              <span class="notation"
+                >JR 236K<span class="notation-img"
+                  ><img
+                    src="../images/A.B.A_JR236K.png"
+                    alt="JR 236K"></span></span
+              >, welcher als schneller Überkopf-Angriff sogar sicher ist, wenn
+              der Gegner diesen blockt.
+            </li>
+            <li>
+              Unverwundbarkeit —
+              <span class="notation"
+                >JR 623H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR623H.png" alt="JR 623H"></span
+              ></span>
+              ist unverwundbar und eignet sich dazu, den Gegner für seine
+              defensiven Optionen zu bestrafen, sollte man dies erwarten.
+            </li>
+          </ul>
+          <p>
+            Durch die überwältigende Kraft des Wutzustands, bekommt A.B.A einen
+            großen Freiraum in ihren Möglichkeiten. Es ist sehr schwer gegen
+            A.B.A zu gewinnen, sobald sie diesen Modus erreicht.
+          </p>
+          <br>
+          <figure id="goal">
+            <img
+              src="../images/Screenshot_2026-02-26_125819.png"
+              alt="Ziel von A.B.A"
+              draggable="false"
+              tabindex="-1"
+            >
+            <figcaption>Das Ziel von A.B.A</figcaption>
+          </figure>
+        </article>
+
+        <article id="combos" class="guide-section">
+          <h2>3. Combos</h2>
+          <p>
+            Die Combos von A.B.A haben unterschiedliche Ziele, je nach Zustand.
+            Im Normalzustand liegt der Fokus darauf, möglichst viel ihrer
+            Wutleiste aufzubauen:
+          </p>
+          <h3>Normalzustand Combos</h3>
+          <ol>
+            <li>
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >2S<span class="notation-img"
+                  ><img src="../images/A.B.A_2S.png" alt="2S"></span
+              ></span>
+              →
+              <span class="notation"
+                >2H<span class="notation-img"
+                  ><img src="../images/A.B.A_2H.png" alt="2H"></span
+              ></span>
+              →
+              <span class="notation"
+                >236S<span class="notation-img"
+                  ><img src="../images/A.B.A_236S.png" alt="236S"></span
+              ></span>
+              →
+              <span class="notation"
+                >6S<span class="notation-img"
+                  ><img src="../images/A.B.A_6S.png" alt="6S"></span
+              ></span>
+            </li>
+            <li>
+              <span class="notation"
+                >2S<span class="notation-img"
+                  ><img src="../images/A.B.A_2S.png" alt="2S"></span
+              ></span>
+              →
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >2H<span class="notation-img"
+                  ><img src="../images/A.B.A_2H.png" alt="2H"></span
+              ></span>
+              →
+              <span class="notation"
+                >214H<span class="notation-img"
+                  ><img src="../images/A.B.A_214H.png" alt="214H"></span
+              ></span>
+            </li>
+            <li>
+              <span class="notation"
+                >2P<span class="notation-img"
+                  ><img src="../images/A.B.A_2P.png" alt="2P"></span
+              ></span>
+              →
+              <span class="notation"
+                >2K<span class="notation-img"
+                  ><img src="../images/A.B.A_2K.png" alt="2K"></span
+              ></span>
+              →
+              <span class="notation"
+                >236S<span class="notation-img"
+                  ><img src="../images/A.B.A_236S.png" alt="236S"></span
+              ></span>
+              →
+              <span class="notation"
+                >6S<span class="notation-img"
+                  ><img src="../images/A.B.A_6S.png" alt="6S"></span
+              ></span>
+            </li>
+          </ol>
+          <p>
+            Im Wutzustand liegt der Fokus auf möglichst viel Schaden und etwas
+            von der Wutleiste wiederherzustellen:
+          </p>
+          <h3>Wutzustand Combos</h3>
+          <ol>
+            <li>
+              <span class="notation"
+                >JR 236K<span class="notation-img"
+                  ><img src="../images/A.B.A_JR236K.png" alt="JR236K"></span
+              ></span>
+              →
+              <span class="notation"
+                >5K<span class="notation-img"
+                  ><img src="../images/A.B.A_5K.png" alt="5K"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 623H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR623H.png" alt="JR623H"></span
+              ></span>
+              →
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 6H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR6H.png" alt="JR6H"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 214H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR214H.png" alt="JR214H"></span
+              ></span>
+            </li>
+            <li>
+              <span class="notation"
+                >JR 2H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR2H.png" alt="JR2H"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 623H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR623H.png" alt="JR623H"></span
+              ></span>
+              →
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 6H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR6H.png" alt="JR6H"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 623H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR623H.png" alt="JR623H"></span
+              ></span>
+              →
+              <span class="notation"
+                >5K<span class="notation-img"
+                  ><img src="../images/A.B.A_5K.png" alt="5K"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 63214P<span class="notation-img"
+                  ><img
+                    src="../images/A.B.A_JR63214P.png"
+                    alt="JR63214P"></span
+              ></span>
+            </li>
+            <li>
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 623H<span class="notation-img"
+                  ><img src="../images/A.B.A_JR623H.png" alt="JR623H"></span
+              ></span>
+              →
+              <span class="notation"
+                >c.S<span class="notation-img"
+                  ><img src="../images/A.B.A_cS.png" alt="c.S"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 236K<span class="notation-img"
+                  ><img src="../images/A.B.A_JR236K.png" alt="JR236K"></span
+              ></span>
+              →
+              <span class="notation"
+                >2K<span class="notation-img"
+                  ><img src="../images/A.B.A_2K.png" alt="2K"></span
+              ></span>
+              →
+              <span class="notation"
+                >236S<span class="notation-img"
+                  ><img src="../images/A.B.A_236S.png" alt="236S"></span
+              ></span>
+              →
+              <span class="notation"
+                >6S<span class="notation-img"
+                  ><img src="../images/A.B.A_6S.png" alt="6S"></span
+              ></span>
+              →
+              <span class="notation"
+                >JR 63214P<span class="notation-img"
+                  ><img
+                    src="../images/A.B.A_JR63214P.png"
+                    alt="JR63214P"></span
+              ></span>
+              →
+              <span class="notation"
+                >63214P<span class="notation-img"
+                  ><img src="../images/A.B.A_63214P.png" alt="63214P"></span
+              ></span>
+            </li>
+          </ol>
+        </article>
+
+        <article id="video" class="guide-section">
+          <h2>4. Ausführlicher Video-Guide</h2>
+          <p>Hier ist ein weiterführender Video-Guide zu A.B.A:</p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/qqtkS92COow?si=YZA6D4ATSXdTqfy3"
+            title="YouTube video player"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </article>
+        <article id="resources" class="guide-section">
+          <h2>5. Ressourcen</h2>
+          <p>Hier sind einige nützliche Ressourcen:</p>
+          <ul class="resources-list">
+            <li>
+              <a href="https://www.dustloop.com/w/GGST/A.B.A" target="_blank"
+                >Dustloop Wiki: A.B.A</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustloop.com/w/Notation#Numpad_Notation"
+                target="_blank"
+                >Erklärung zur Numpad-Notation</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

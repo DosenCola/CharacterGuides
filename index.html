@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilty Gear Strive Character Guides</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>GGST - Character Guides</h1>
+      <p>Wähle einen Charakter, um die Guide-Seite zu öffnen.</p>
+    </header>
+  
+    <main>
+      <form id="difficultyForm" aria-label="Filter nach Schwierigkeit">
+        <label for="difficultyFilter">Schwierigkeit:</label>
+        <select id="difficultyFilter" name="difficulty">
+          <option value="all">Alle</option>
+          <option value="1star">1 Stern</option>
+          <option value="2star">2 Sterne</option>
+          <option value="3star">3 Sterne</option>
+          <option value="4star">4 Sterne</option>
+          <option value="5star">5 Sterne</option>
+        </select>
+      </form>
+
+      <input
+        id="charSearch"
+        type="search"
+        placeholder="Charakter suchen..."
+        aria-label="Charakter Suche">
+
+
+      <nav aria-label="Charakter Auswahl">
+        <ul class="char-grid">
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/sol.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive.jpg"
+                alt="Sol Badguy">
+              <span class="char-name">Sol Badguy</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/ky.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_kyk.jpg"
+                alt="Ky Kiske">
+              <span class="char-name">Ky Kiske</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/may.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_may-1.jpg"
+                alt="May">
+              <span class="char-name">May</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/axl.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_axl.jpg"
+                alt="Axl Low">
+              <span class="char-name">Axl Low</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/chipp.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_chp.jpg"
+                alt="Chipp Zanuff">
+              <span class="char-name">Chipp Zanuff</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/potemkin.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_pot.jpg"
+                alt="Potemkin">
+              <span class="char-name">Potemkin</span>
+            </a>
+          </li>
+
+          <li class="4star">
+            <a
+              class="char-box"
+              href="characters/faust.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_fau.jpg"
+                alt="Faust">
+              <span class="char-name">Faust</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/millia.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_mll.jpg"
+                alt="Millia Rage">
+              <span class="char-name">Millia Rage</span>
+            </a>
+          </li>
+
+          <li class="5star">
+            <a
+              class="char-box"
+              href="characters/zato.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_zat.jpg"
+                alt="Zato-1">
+              <span class="char-name">Zato-1</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/ramlethal.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_ram-1.jpg"
+                alt="Ramlethal">
+              <span class="char-name">Ramlethal</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/leo.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_leo.jpg"
+                alt="Leo Whitefang">
+              <span class="char-name">Leo Whitefang</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/nagoriyuki.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_nag.jpg"
+                alt="Nagoriyuki">
+              <span class="char-name">Nagoriyuki</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/giovanna.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive_gio.jpg"
+                alt="Giovanna">
+              <span class="char-name">Giovanna</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/anji.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2021/03/anji-306x305.jpg"
+                alt="Anji Mito">
+              <span class="char-name">Anji Mito</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/ino.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2021/03/rxx82us-1-306x305.jpg"
+                alt="I-No">
+              <span class="char-name">I-No</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/goldlewis.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2021/07/gol-306x305.jpg"
+                alt="Goldlewis Dickinson">
+              <span class="char-name">Goldlewis Dickinson</span>
+            </a>
+          </li>
+
+          <li class="5star">
+            <a
+              class="char-box"
+              href="characters/jacko.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2021/08/jko.jpg"
+                alt="Jack-O' Valentine">
+              <span class="char-name">Jack-O' Valentine</span>
+            </a>
+          </li>
+
+          <li class="5star">
+            <a
+              class="char-box"
+              href="characters/happychaos.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2021/11/82nCeh3s.jpg"
+                alt="Happy Chaos">
+              <span class="char-name">Happy Chaos</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/baiken.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2022/01/94gvos0f.jpg"
+                alt="Baiken">
+              <span class="char-name">Baiken</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/testament.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2022/03/icon-1ubduiak.jpg"
+                alt="Testament">
+              <span class="char-name">Testament</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/bridget.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2022/08/38nd9nd2jd73.jpg"
+                alt="Bridget">
+              <span class="char-name">Bridget</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/sin.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2022/11/n5idg73diw3.jpg"
+                alt="Sin Kiske">
+              <span class="char-name">Sin Kiske</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/bedman.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2023/03/5fve3hdwci.jpg"
+                alt="Bedman">
+              <span class="char-name">Bedman?</span>
+            </a>
+          </li>
+
+          <li class="5star">
+            <a
+              class="char-box"
+              href="characters/asuka.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2023/05/xnNj771Auw.jpg"
+                alt="Asuka R. Kreutz">
+              <span class="char-name">Asuka R. Kreutz</span>
+            </a>
+          </li>
+
+          <li class="3star">
+            <a
+              class="char-box"
+              href="characters/johnny.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2023/08/archive_4ny9b-6nvi.jpg"
+                alt="Johnny">
+              <span class="char-name">Johnny</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/elphelt.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2023/12/4nf89dcoo3.jpg"
+                alt="Elphelt Valentine">
+              <span class="char-name">Elphelt Valentine</span>
+            </a>
+          </li>
+
+          <li class="4star">
+            <a
+              class="char-box"
+              href="characters/aba.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2024/03/3uf9vnso76.jpg"
+                alt="A.B.A">
+              <span class="char-name">A.B.A</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/slayer.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2024/04/4tg8hdo2.jpg"
+                alt="Slayer">
+              <span class="char-name">Slayer</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/dizzy.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2018/10/archive-ny040fsi2.jpg"
+                alt="Dizzy">
+              <span class="char-name">Dizzy</span>
+            </a>
+          </li>
+
+          <li class="4star">
+            <a
+              class="char-box"
+              href="characters/venom.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2025/03/adhfjha.jpg"
+                alt="Venom">
+              <span class="char-name">Venom</span>
+            </a>
+          </li>
+
+          <li class="1star">
+            <a
+              class="char-box"
+              href="characters/unika.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2025/05/khfauiy.jpg"
+                alt="Unika">
+              <span class="char-name">Unika</span>
+            </a>
+          </li>
+
+          <li class="2star">
+            <a
+              class="char-box"
+              href="characters/lucy.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="char-icon-img"
+                src="https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2025/08/qokdhj.jpg"
+                alt="Lucy">
+              <span class="char-name">Lucy</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        id="noCharsMsg"
+        hidden
+      >
+        Keine Charaktere gefunden.
+      </div>
+    </main>
+  </body>
+</html>
